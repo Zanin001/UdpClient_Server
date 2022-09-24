@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDPClient", "UDPClient\UDPClient.csproj", "{7D75492F-8DC4-47D3-9FD8-82C346D7C56C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDPServer", "UDPServer\UDPServer.csproj", "{C5A0A99F-8CCB-4759-B4B8-BF34E9458F12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDP", "UDP\UDP.csproj", "{8E9F43B3-9887-403A-98A3-7F1419208824}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D75492F-8DC4-47D3-9FD8-82C346D7C56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D75492F-8DC4-47D3-9FD8-82C346D7C56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D75492F-8DC4-47D3-9FD8-82C346D7C56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D75492F-8DC4-47D3-9FD8-82C346D7C56C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A0A99F-8CCB-4759-B4B8-BF34E9458F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A0A99F-8CCB-4759-B4B8-BF34E9458F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A0A99F-8CCB-4759-B4B8-BF34E9458F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A0A99F-8CCB-4759-B4B8-BF34E9458F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E9F43B3-9887-403A-98A3-7F1419208824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E9F43B3-9887-403A-98A3-7F1419208824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E9F43B3-9887-403A-98A3-7F1419208824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E9F43B3-9887-403A-98A3-7F1419208824}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCC1865A-60AF-4948-BFD6-91C4A72A4C05}
+	EndGlobalSection
+EndGlobal
