@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:UDPServer"
         mc:Ignorable="d"
         Title="UDP Service" Height="450" Width="800">
+    
     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -13,23 +14,35 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Column="0" Grid.Row="0">
             <Label Content="UDP SERVER" HorizontalAlignment="Center" FontWeight="Bold" Foreground="Black" FontSize="28"/>
         </Grid>
+        
         <Grid Grid.Column="0" Grid.Row="1" Margin="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
+
             <Grid Grid.Column="0">
                 <GroupBox BorderBrush="Black">
                     <GroupBox.Header>
                         <Label Content="Connection" FontWeight="Bold" Foreground="Black" FontSize="14"/>
                     </GroupBox.Header>
+                    <StackPanel>
+                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="4, 0, 0, 8">
+                            <Button Content="Start" Name="StartButton" BorderThickness="1" BorderBrush="Black" Width="100" Margin="0, 0, 3, 0" Background="GhostWhite" />
+                            <Button Content="Stop" Name="StopButton" BorderThickness="1" BorderBrush="Black" Width="100" Background="GhostWhite" />
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="4, 0, 0, 8">
+                            <TextBlock Text="Status:" FontWeight="Bold" Foreground="Black" FontSize="10" VerticalAlignment="Center" Margin="1"/>
+                            <Ellipse x:Name="statusEllipse" Width="20" Height="20" Margin="2" Fill="Green" Stroke="Black"/>
+                        </StackPanel>
+                    </StackPanel>
                 </GroupBox>
-            </Grid> 
+            </Grid>
             <Grid Grid.Column="1">
                 <GroupBox BorderBrush="Black">
                     <GroupBox.Header>
@@ -48,6 +61,25 @@
                 </GroupBox>
             </Grid>
         </Grid>
+        
+        <Grid Grid.Column="0" Grid.Row="2" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Column="0" Grid.Row="0">
+                <GroupBox BorderBrush="Black">
+                    <GroupBox.Header>
+                        <Label Content="Messages" FontWeight="Bold" Foreground="Black" FontSize="14"/>
+                    </GroupBox.Header>
+                </GroupBox>
+            </Grid>
+        </Grid>
 
     </Grid>
+    
 </Window>
