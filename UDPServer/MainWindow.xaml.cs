@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UDPServer.ViewModels;
 
 namespace UDPServer
 {
@@ -23,6 +24,7 @@ namespace UDPServer
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new Server_ViewModel();
         }
     }
 }

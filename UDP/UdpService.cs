@@ -2,17 +2,8 @@
 
 public class UdpService
 {
-        
-    public static UdpClient UdpClient 
-    {
-        get
-        {
-            if (_udpClient == null)
-                _udpClient = new UdpClient();
-            return _udpClient;
-        }
-    }
-    private static UdpClient _udpClient { get; set; }
+ 
+    private static UdpClient UdpClient { get; set; }
     public static Socket Socket
     {
         get
@@ -23,7 +14,17 @@ public class UdpService
         }
     }
     private static Socket _socket { get; set; }
-    public static async Task Send(Byte[] message, IPEndPoint address)
+
+    public UdpService()
+    {
+
+    }
+
+
+    public async Task<bool> IsConnected()
+        => UdpClient.Client.Connected;
+
+    public async Task Send(Byte[] message, IPEndPoint address)
     {
         try
         {
@@ -35,8 +36,19 @@ public class UdpService
         }
     }
         
-    public static async Task Listen()
+    public async Task<string> Listen(IPEndPoint address)
     {
+        try
+        {
+            UdpClient = new (address.Port);
 
+            byte[] message = UdpClient.Receive(ref address);
+
+            return Encoding.ASCII.GetString(message, 0, message.Length);
+        }
+        catch(Exception e)
+        {
+            return e.Message;
+        }
     }
 }
