@@ -40,7 +40,7 @@
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="4, 0, 0, 8">
                             <TextBlock Text="Status:" FontWeight="Bold" Foreground="Black" FontSize="10" VerticalAlignment="Center" Margin="1"/>
-                            <Ellipse x:Name="statusEllipse" Width="20" Height="20" Margin="2" Fill="Green" Stroke="Black"/>
+                            <Ellipse x:Name="statusEllipse" Width="20" Height="20" Margin="2" Fill="{Binding StatusColor}" Stroke="Black"/>
                         </StackPanel>
                     </StackPanel>
                 </GroupBox>

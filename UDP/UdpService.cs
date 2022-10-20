@@ -17,12 +17,7 @@ public class UdpService
 
     public UdpService()
     {
-
     }
-
-
-    public async Task<bool> IsConnected()
-        => UdpClient.Client.Connected;
 
     public async Task Send(Byte[] message, IPEndPoint address)
     {
@@ -50,5 +45,11 @@ public class UdpService
         {
             return e.Message;
         }
+    }
+
+    public void StopListen()
+    {
+        if (UdpClient is not null)
+            UdpClient.Dispose();
     }
 }
