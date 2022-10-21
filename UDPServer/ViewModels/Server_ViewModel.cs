@@ -95,7 +95,7 @@ namespace UDPServer.ViewModels
             _model = new ();
             new Thread(StatusSync).Start();
         }
-
+        //GIT TEST
         public async void Start()
         {
             if (_port is not null)
