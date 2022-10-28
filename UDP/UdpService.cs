@@ -19,15 +19,16 @@ public class UdpService
     {
     }
 
-    public async Task Send(Byte[] message, IPEndPoint address)
+    public async Task<bool> Send(Byte[] message, IPEndPoint address)
     {
         try
         {
             Socket.SendTo(message, address);
+            return true;
         }
         catch(Exception e)
         {
-
+            return false;
         }
     }
         

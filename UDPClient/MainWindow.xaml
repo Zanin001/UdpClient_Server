@@ -25,26 +25,10 @@
         <Grid Grid.Column="0" Grid.Row="1" Margin="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
-                <GroupBox BorderBrush="Black">
-                    <GroupBox.Header>
-                        <Label Content="Connection" FontWeight="Bold" Foreground="Black" FontSize="14"/>
-                    </GroupBox.Header>
-                    <StackPanel>
-                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="4, 0, 0, 8">
-                            <Button Content="Connect" Name="ConnectButton" BorderThickness="1" BorderBrush="Black" Width="100" Margin="0, 0, 3, 0" Background="GhostWhite" />
-                        </StackPanel>
-                        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="4, 0, 0, 8">
-                            <TextBlock Text="Status:" FontWeight="Bold" Foreground="Black" FontSize="10" VerticalAlignment="Center" Margin="1"/>
-                            <Ellipse x:Name="statusEllipse" Width="20" Height="20" Margin="2" Fill="Green" Stroke="Black"/>
-                        </StackPanel>
-                    </StackPanel>
-                </GroupBox>
-            </Grid>
-            <Grid Grid.Column="1">
                 <GroupBox BorderBrush="Black">
                     <GroupBox.Header>
                         <Label Content="Settings" FontWeight="Bold" Foreground="Black" FontSize="14"/>
@@ -81,11 +65,11 @@
 
                     <StackPanel>
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="4,0,0,8">
-                            <TextBox x:Name="messageBox" Margin="4,0,4,0" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="600" Height="150" AcceptsTab="True" AcceptsReturn="True"
+                            <TextBox x:Name="messageBox" Text="{Binding Message, Mode=TwoWay}" Margin="4,0,4,0" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="600" Height="150" AcceptsTab="True" AcceptsReturn="True"
                                       TextWrapping="Wrap" MaxLines="5"/>
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="4,0,0,8">
-                            <Button Content="Send" Name="SendButton" BorderThickness="1" BorderBrush="Black" Width="100" Margin="0, 0, 3, 0" Background="GhostWhite" />
+                            <Button Command="{Binding SendCmd}" Content="Send" Name="SendButton" BorderThickness="1" BorderBrush="Black" Width="100" Margin="0, 0, 3, 0" Background="GhostWhite" />
                         </StackPanel>
                     </StackPanel>
                     
