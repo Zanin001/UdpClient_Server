@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UDPClient"
+        xmlns:viewmodels="clr-namespace:UDPClient.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:Client_ViewModel}"
         mc:Ignorable="d"
         Title="UDP Client" Height="450" Width="800">
     
@@ -51,11 +52,11 @@
                     <StackPanel>
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="4,0,0,8">
                             <TextBlock Text="Server IP: " FontWeight="Bold" Foreground="Black" FontSize="10" VerticalAlignment="Center" />
-                            <TextBox x:Name="ipBox" Margin="4,0,4,0" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="150" MaxLength="15"/>
+                            <TextBox x:Name="ipBox" Text="{Binding IpAddress, Mode=OneWay}" IsEnabled="False" Margin="4,0,4,0" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="150" MaxLength="15"/>
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="4,0,0,8">
                             <TextBlock Text="Communication Port: " FontWeight="Bold" Foreground="Black" FontSize="10" VerticalAlignment="Center" />
-                            <TextBox x:Name="portBox" Margin="4,0,4,0" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="50" MaxLength="5"/>
+                            <TextBox x:Name="portBox" Text="{Binding Port, Mode=TwoWay}" Margin="4,0,4,0" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="50" MaxLength="4" PreviewTextInput="PreviewTextInput"/>
                         </StackPanel>
                     </StackPanel>
                 </GroupBox>
@@ -80,8 +81,8 @@
 
                     <StackPanel>
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="4,0,0,8">
-                            <TextBox x:Name="messageBox" Margin="4,0,4,0" VerticalAlignment="Center" VerticalContentAlignment="Center" Width="600" Height="150" AcceptsTab="True"
-                                      AllowDrop="True" MaxLines="5"/>
+                            <TextBox x:Name="messageBox" Margin="4,0,4,0" VerticalAlignment="Top" VerticalContentAlignment="Top" Width="600" Height="150" AcceptsTab="True" AcceptsReturn="True"
+                                      TextWrapping="Wrap" MaxLines="5"/>
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="4,0,0,8">
                             <Button Content="Send" Name="SendButton" BorderThickness="1" BorderBrush="Black" Width="100" Margin="0, 0, 3, 0" Background="GhostWhite" />
